@@ -78,3 +78,11 @@ resource "cloudflare_record" "keybase" {
   type    = "TXT"
   proxied = false
 }
+
+resource "cloudflare_record" "traceroute" {
+  zone_id = var.zone_id
+  name    = "trace"
+  value   = "54.36.167.38"
+  type    = "A"
+  proxied = true
+}
