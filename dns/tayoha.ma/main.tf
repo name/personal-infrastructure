@@ -86,3 +86,11 @@ resource "cloudflare_record" "traceroute" {
   type    = "A"
   proxied = true
 }
+
+resource "cloudflare_record" "whoami" {
+  zone_id = var.zone_id
+  name    = "who"
+  value   = "54.36.167.38"
+  type    = "A"
+  proxied = true
+}
