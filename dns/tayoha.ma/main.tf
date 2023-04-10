@@ -94,3 +94,11 @@ resource "cloudflare_record" "whoami" {
   type    = "A"
   proxied = true
 }
+
+resource "cloudflare_record" "ticketai" {
+  zone_id = var.zone_id
+  name    = "ticket"
+  value   = "54.36.167.38"
+  type    = "A"
+  proxied = true
+}
