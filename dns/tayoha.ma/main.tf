@@ -102,3 +102,11 @@ resource "cloudflare_record" "ticketai" {
   type    = "A"
   proxied = true
 }
+
+resource "cloudflare_record" "clippy" {
+  zone_id = var.zone_id
+  name    = "clippy"
+  value   = "54.36.167.38"
+  type    = "A"
+  proxied = true
+}
